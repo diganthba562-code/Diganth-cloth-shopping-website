@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.innerHTML = `
                         <img src="${product.image_url}" alt="${product.name}">
                         <h3>${product.name}</h3>
-                        <span>$${product.price}</span>
+                        <span>₹${product.price}</span>
                     `;
                     productGrid.appendChild(card);
                 });
