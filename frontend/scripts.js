@@ -40,9 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderFallback = () => {
         const fallbacks = [
-            { name: 'Premium Silk Shirt', price: '89.99', image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1000&auto=format&fit=crop' },
-            { name: 'Modern Denim Jacket', price: '129.50', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop' },
-            { name: 'Designer Wool Coat', price: '199.00', image: 'https://images.unsplash.com/photo-1539109132332-629ee439a7df?q=80&w=1000&auto=format&fit=crop' }
+            { name: 'Modern Black Cargo', price: '99.99', image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1000&auto=format&fit=crop' },
+            { name: 'Mauve Silk Shirt', price: '89.99', image: 'https://images.unsplash.com/photo-1618354691268-de33c847accf?q=80&w=1000&auto=format&fit=crop' },
+            { name: 'Heritage Fleece Denim', price: '129.50', image: 'https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?q=80&w=1000&auto=format&fit=crop' },
+            { name: 'Classic Wool Overcoat', price: '199.00', image: 'https://images.unsplash.com/photo-1539109132332-629ee439a7df?q=80&w=1000&auto=format&fit=crop' }
         ];
         productGrid.innerHTML = '';
         fallbacks.forEach(product => {
