@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS order_items (
 -- Fresh Inventory for "Diganth" (Exactly 4 Items: Hoodie, Sweatshirt, Tee, Shoes)
 TRUNCATE TABLE products;
 INSERT INTO products (name, description, price, image_url, category) VALUES
-('Essential Oversized Hoodie', 'Heavyweight cotton-blend hoodie with a modern oversized fit and kangaroo pocket.', 79.99, 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1000&auto=format&fit=crop', 'Hoodie'),
+('Essential Oversized Hoodie', 'Heavyweight cotton-blend hoodie with a modern oversized fit and kangaroo pocket.', 79.99, '/assets/premium_hoodie.png', 'Hoodie'),
 ('Signature Fleece Sweatshirt', 'Premium fleece-lined sweatshirt with ribbed cuffs and a classic crewneck.', 69.50, 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop', 'Sweatshirt'),
 ('Graphic Streetwear Tee', 'Creative graphic print tee made from 100% fine-spun cotton.', 35.00, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop', 'T-shirt'),
 ('Phantom Knit Sneakers', 'Ultra-lightweight knit sneakers with reactive cushioning for all-day comfort.', 120.00, 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop', 'Shoes');
