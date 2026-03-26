@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Digant Cloth Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .admin-container {
+            padding: 120px 5% 50px;
+            min-height: 100vh;
+        }
+        .message-list {
+            margin-top: 30px;
+            display: grid;
+            gap: 20px;
+        }
+        .message-item {
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+        }
+        .message-item h3 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        .message-item p {
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+        .message-item blockquote {
+            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 5px;
+            font-style: italic;
+        }
+        .refresh-btn {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="glass">
+        <div class="logo">Digant Admin</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">View Site</a></li>
+                <li><a href="#" id="refresh-link">Refresh Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="admin-container">
+        <h1 class="section-title">Customer Messages</h1>
+        <button id="refresh-btn" class="btn refresh-btn">Refresh Messages</button>
+        <div id="message-list" class="message-list">
+            <!-- Messages will be loaded here via JS -->
+            <p>Loading messages...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Digant Cloth Brand - Admin Panel</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

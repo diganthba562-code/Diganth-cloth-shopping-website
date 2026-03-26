@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diganth Cloth Brand | Premium Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="glass">
+        <div class="logo">Diganth</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#products">Collection</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h1>Elevate Your Style</h1>
+        <p>Discover the finest collection of premium clothing designed for the modern individual. Quality meets elegance
+            in every stitch.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <section id="products" class="products">
+        <h2 class="section-title">New Collection</h2>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be loaded here via JS -->
+            <div class="product-card glass">
+                <img src="https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=1000&auto=format&fit=crop"
+                    alt="Silk Shirt">
+                <h3>Premium Silk Shirt</h3>
+                <span>$89.99</span>
+            </div>
+            <div class="product-card glass">
+                <img src="https://images.unsplash.com/photo-1576871333021-69fd1df0636f?q=80&w=1000&auto=format&fit=crop"
+                    alt="Denim Jacket">
+                <h3>Modern Denim Jacket</h3>
+                <span>$129.50</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-form glass">
+            <h2>Get In Touch</h2>
+            <form id="message-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+            <p id="form-status" style="margin-top: 20px; text-align: center;"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Diganth Cloth Brand. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
