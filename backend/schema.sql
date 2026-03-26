@@ -47,5 +47,5 @@ TRUNCATE TABLE products;
 INSERT INTO products (name, description, price, image_url, category) VALUES
 ('Essential Oversized Hoodie', 'Heavyweight cotton-blend hoodie with a modern oversized fit and kangaroo pocket.', 79.99, '/assets/premium_hoodie.png', 'Hoodie'),
 ('Premium Vintage Denim Jacket', 'Classic distressed denim jacket with a modern fit and heavy-duty stitching.', 95.00, '/assets/premium_denim_jacket.png', 'Jacket'),
-('Graphic Streetwear Tee', 'Creative graphic print tee made from 100% fine-spun cotton.', 35.00, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop', 'T-shirt'),
+('Heavyweight Oversized Premium Tee', 'Boxy, oversized silhouette with dropped shoulders and a thick ribbed collar.', 45.00, '/assets/premium_oversized_tee.png', 'T-shirt'),
 ('Phantom Knit Sneakers', 'Ultra-lightweight knit sneakers with reactive cushioning for all-day comfort.', 120.00, 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop', 'Shoes');
