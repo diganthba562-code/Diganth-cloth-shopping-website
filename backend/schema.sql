@@ -1,6 +1,10 @@
 CREATE DATABASE IF NOT EXISTS digant_db;
 USE digant_db;
 
+-- Set Timezone to IST (Indian Standard Time)
+SET GLOBAL time_zone = '+05:30';
+SET time_zone = '+05:30';
+
 CREATE TABLE IF NOT EXISTS products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
