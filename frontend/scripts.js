@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const fallbacks = [
             { id: 1, name: 'Essential Oversized Hoodie', price: 1300.00, image: '/assets/premium_hoodie.png' },
             { id: 2, name: 'Premium Vintage Denim Jacket', price: 2400.00, image: '/assets/premium_denim_jacket.png' },
-            { id: 3, name: 'Heavyweight Oversized Premium Tee', price: 45.00, image: '/assets/premium_oversized_tee.png' },
+            { id: 3, name: 'Heavyweight Oversized Premium Tee', price: 700.00, image: '/assets/premium_oversized_tee.png' },
             { id: 5, name: 'Premium Retro Air Jordans', price: 180.00, image: '/assets/premium_jordans.png' }
         ];
         renderProducts(fallbacks.map(f => ({ ...f, image_url: f.image })));
