@@ -38,12 +38,12 @@ CREATE TABLE IF NOT EXISTS order_items (
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
--- Fresh Inventory for "Diganth"
+-- Fresh Inventory for "Diganth" (Redesigned with Hoodies, Sweatshirts, Tees, Shoes, Cargos)
 TRUNCATE TABLE products;
 INSERT INTO products (name, description, price, image_url, category) VALUES
-('Luxe Cashmere Sweater', 'Ultra-soft cashmere wool blend for ultimate comfort and style.', 149.99, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop', 'Sweaters'),
-('Midnight Velvet Blazer', 'Sophisticated velvet blazer with a slim-fit tailored silhouette.', 189.99, 'https://images.unsplash.com/photo-1507679799987-c7377ec48696?q=80&w=1000&auto=format&fit=crop', 'Jackets'),
-('Artisan Leather Boots', 'Handcrafted genuine leather boots with a rugged yet polished look.', 219.00, 'https://images.unsplash.com/photo-1520639889313-7272a747ca90?q=80&w=1000&auto=format&fit=crop', 'Footwear'),
-('Satin Evening Gown', 'Elegant floor-length satin gown for high-end evening events.', 165.50, 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1000&auto=format&fit=crop', 'Dresses'),
-('Tailored Linen Trousers', 'Breathable Italian linen trousers, perfect for summer elegance.', 95.00, 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1000&auto=format&fit=crop', 'Pants'),
-('Minimalist Essential Tee', 'Premium heavy-weight cotton tee in a clean, minimalist fit.', 45.00, 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop', 'Tees');
+('Essential Oversized Hoodie', 'Heavyweight cotton-blend hoodie with a modern oversized fit and kangaroo pocket.', 79.99, 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1000&auto=format&fit=crop', 'Hoodies'),
+('Signature Fleece Sweatshirt', 'Premium fleece-lined sweatshirt with ribbed cuffs and a classic crewneck.', 69.50, 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop', 'Sweatshirts'),
+('Graphic Streetwear Tee', 'Creative graphic print tee made from 100% fine-spun cotton.', 35.00, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop', 'T-shirts'),
+('Urban Tech Cargo Pants', 'Multi-pocket tactical cargo pants with a durable, tapered fit.', 85.00, 'https://images.unsplash.com/photo-1624372927054-944a957b0ee5?q=80&w=1000&auto=format&fit=crop', 'Pants'),
+('Phantom Knit Sneakers', 'Ultra-lightweight knit sneakers with reactive cushioning for all-day comfort.', 120.00, 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop', 'Shoes'),
+('Boxy Fit Heavyweight Tee', 'Relaxed boxy silhouette with dropped shoulders and thick ribbing.', 40.00, 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop', 'T-shirts');
