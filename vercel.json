@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "diganth-cloth-shopping-website",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "http://localhost:5000/api/$1" },
+    { "source": "/(.*)", "destination": "/frontend/$1" }
+  ]
+}

@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const refreshBtn = document.getElementById('refresh-btn');
     const refreshLink = document.getElementById('refresh-link');
 
+    // Backend API Base URL
+    const API_BASE_URL = 'http://localhost:5000';
+
     const fetchMessages = async () => {
         try {
             messageList.innerHTML = '<p>Loading messages...</p>';
-            const response = await fetch('http://localhost:5000/api/messages');
+            const response = await fetch(`${API_BASE_URL}/api/messages`);
             if (!response.ok) throw new Error('Failed to fetch messages');
             const messages = await response.json();
 

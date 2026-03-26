@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageForm = document.getElementById('message-form');
     const formStatus = document.getElementById('form-status');
 
+    // Backend API Base URL - Update this to your Railway/Vercel backend URL
+    const API_BASE_URL = 'http://localhost:5000'; 
+
     // Fetch products from backend
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/products');
+            const response = await fetch(`${API_BASE_URL}/api/products`);
             if (!response.ok) throw new Error('Failed to fetch products');
             const products = await response.json();
             
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('message').value;
 
             try {
-                const response = await fetch('http://localhost:5000/api/messages', {
+                const response = await fetch(`${API_BASE_URL}/api/messages`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, message })
