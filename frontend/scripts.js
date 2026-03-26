@@ -14,22 +14,47 @@ document.addEventListener('DOMContentLoaded', () => {
             const products = await response.json();
             
             if (products.length > 0) {
-                productGrid.innerHTML = '';
-                products.forEach(product => {
-                    const card = document.createElement('div');
-                    card.className = 'product-card glass';
-                    card.innerHTML = `
-                        <img src="${product.image_url}" alt="${product.name}">
-                        <h3>${product.name}</h3>
-                        <span>₹${product.price}</span>
-                    `;
-                    productGrid.appendChild(card);
-                });
+                renderProducts(products);
+            } else {
+                renderFallback();
             }
         } catch (error) {
             console.error('Error loading products:', error);
-            // Fallback to static if backend isn't running or empty
+            renderFallback();
         }
+    };
+
+    const renderProducts = (products) => {
+        productGrid.innerHTML = '';
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card glass';
+            card.innerHTML = `
+                <img src="${product.image_url}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <span>₹${product.price}</span>
+            `;
+            productGrid.appendChild(card);
+        });
+    };
+
+    const renderFallback = () => {
+        const fallbacks = [
+            { name: 'Premium Silk Shirt', price: '89.99', image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1000&auto=format&fit=crop' },
+            { name: 'Modern Denim Jacket', price: '129.50', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop' },
+            { name: 'Designer Wool Coat', price: '199.00', image: 'https://images.unsplash.com/photo-1539109132332-629ee439a7df?q=80&w=1000&auto=format&fit=crop' }
+        ];
+        productGrid.innerHTML = '';
+        fallbacks.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card glass';
+            card.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <span>₹${product.price}</span>
+            `;
+            productGrid.appendChild(card);
+        });
     };
 
     // Handle message form submission
