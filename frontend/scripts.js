@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkoutForm.reset();
             } else {
                 const err = await response.json();
-                alert('Order failed: ' + (err.error || 'Unknown error'));
+                alert('Order failed: ' + (err.error || 'Unknown error') + '\n\n' + (err.details || ''));
             }
         } catch (error) {
             console.error('Checkout error:', error);

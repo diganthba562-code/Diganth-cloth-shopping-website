@@ -45,7 +45,14 @@ exports.createOrder = async (req, res) => {
             connection.release();
         }
     } catch (err) {
-        console.error('Order Error:', err);
-        res.status(500).json({ error: 'Failed to place order' });
+        console.error('Order Error Detail:', err);
+        // Provide more specific error if possible
+        let errorMsg = 'Failed to place order';
+        if (err.code === 'ER_NO_REFERENCED_ROW_2') {
+            errorMsg = 'Product not found in database. Please refresh and try again.';
+        } else if (err.code === 'ER_NO_SUCH_TABLE') {
+            errorMsg = 'Database tables not found. Please run the provided SQL script.';
+        }
+        res.status(500).json({ error: errorMsg, details: err.message });
     }
 };
