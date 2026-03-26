@@ -11,8 +11,7 @@ exports.getAllProducts = async (req, res) => {
             { id: 2, name: 'Signature Fleece Sweatshirt', price: 69.50, image_url: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop' },
             { id: 3, name: 'Graphic Streetwear Tee', price: 35.00, image_url: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop' },
             { id: 4, name: 'Urban Tech Cargo Pants', price: 85.00, image_url: 'https://images.unsplash.com/photo-1624372927054-944a957b0ee5?q=80&w=1000&auto=format&fit=crop' },
-            { id: 5, name: 'Phantom Knit Sneakers', price: 120.00, image_url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop' },
-            { id: 6, name: 'Boxy Fit Heavyweight Tee', price: 40.00, image_url: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop' }
+            { id: 5, name: 'Phantom Knit Sneakers', price: 120.00, image_url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop' }
         ]);
     }
 };
