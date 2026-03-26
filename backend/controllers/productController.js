@@ -7,10 +7,12 @@ exports.getAllProducts = async (req, res) => {
     } catch (err) {
         console.warn('Database error, providing mock data for products...');
         res.json([
-            { id: 1, name: 'Premium Silk Shirt', price: 89.99, image_url: 'https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=1000&auto=format&fit=crop' },
-            { id: 2, name: 'Modern Denim Jacket', price: 129.50, image_url: 'https://images.unsplash.com/photo-1576871333021-69fd1df0636f?q=80&w=1000&auto=format&fit=crop' },
-            { id: 3, name: 'Urban Cargo Pants', price: 75.00, image_url: 'https://images.unsplash.com/photo-1624372927054-944a957b0ee5?q=80&w=1000&auto=format&fit=crop' },
-            { id: 4, name: 'Designer Wool Coat', price: 249.00, image_url: 'https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?q=80&w=1000&auto=format&fit=crop' }
+            { id: 1, name: 'Luxe Cashmere Sweater', price: 149.99, image_url: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop' },
+            { id: 2, name: 'Midnight Velvet Blazer', price: 189.99, image_url: 'https://images.unsplash.com/photo-1507679799987-c7377ec48696?q=80&w=1000&auto=format&fit=crop' },
+            { id: 3, name: 'Artisan Leather Boots', price: 219.00, image_url: 'https://images.unsplash.com/photo-1520639889313-7272a747ca90?q=80&w=1000&auto=format&fit=crop' },
+            { id: 4, name: 'Satin Evening Gown', price: 165.50, image_url: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1000&auto=format&fit=crop' },
+            { id: 5, name: 'Tailored Linen Trousers', price: 95.00, image_url: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1000&auto=format&fit=crop' },
+            { id: 6, name: 'Minimalist Essential Tee', price: 45.00, image_url: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop' }
         ]);
     }
 };

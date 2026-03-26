@@ -20,6 +20,16 @@
                 <li><a href="#products">Collection</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="admin.html">Admin</a></li>
+                <li id="cart-icon-container">
+                    <button id="cart-btn" class="cart-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"></path>
+                            <path d="M3 6h18"></path>
+                            <path d="M16 10a4 4 0 01-8 0"></path>
+                        </svg>
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -75,6 +85,46 @@
     <footer>
         <p>&copy; 2026 Diganth Cloth Brand. All Rights Reserved.</p>
     </footer>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="cart-drawer glass">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be loaded here -->
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="total-price">₹0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal glass">
+        <div class="modal-content glass">
+            <h2>Complete Your Order</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="cust-name">Full Name</label>
+                    <input type="text" id="cust-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cust-email">Email Address</label>
+                    <input type="email" id="cust-email" placeholder="Enter your email" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="cancel-checkout" class="btn secondary">Cancel</button>
+                    <button type="submit" class="btn primary">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>

@@ -19,8 +19,31 @@ CREATE TABLE IF NOT EXISTS messages (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(255) NOT NULL,
+    customer_email VARCHAR(255) NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    status VARCHAR(50) DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Fresh Inventory for "Diganth"
+TRUNCATE TABLE products;
 INSERT INTO products (name, description, price, image_url, category) VALUES
-('Premium Silk Shirt', 'A luxurious silk shirt for formal occasions.', 89.99, 'https://images.unsplash.com/photo-1598033129183-c4f50c717658?q=80&w=1000&auto=format&fit=crop', 'Shirts'),
-('Modern Denim Jacket', 'Classic denim jacket with a modern fit.', 129.50, 'https://images.unsplash.com/photo-1576871333021-69fd1df0636f?q=80&w=1000&auto=format&fit=crop', 'Jackets'),
-('Urban Cargo Pants', 'Comfortable and stylish cargo pants for daily wear.', 75.00, 'https://images.unsplash.com/photo-1624372927054-944a957b0ee5?q=80&w=1000&auto=format&fit=crop', 'Pants'),
-('Designer Wool Coat', 'Elegant wool coat perfect for winter.', 249.00, 'https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?q=80&w=1000&auto=format&fit=crop', 'Coats');
+('Luxe Cashmere Sweater', 'Ultra-soft cashmere wool blend for ultimate comfort and style.', 149.99, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop', 'Sweaters'),
+('Midnight Velvet Blazer', 'Sophisticated velvet blazer with a slim-fit tailored silhouette.', 189.99, 'https://images.unsplash.com/photo-1507679799987-c7377ec48696?q=80&w=1000&auto=format&fit=crop', 'Jackets'),
+('Artisan Leather Boots', 'Handcrafted genuine leather boots with a rugged yet polished look.', 219.00, 'https://images.unsplash.com/photo-1520639889313-7272a747ca90?q=80&w=1000&auto=format&fit=crop', 'Footwear'),
+('Satin Evening Gown', 'Elegant floor-length satin gown for high-end evening events.', 165.50, 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=1000&auto=format&fit=crop', 'Dresses'),
+('Tailored Linen Trousers', 'Breathable Italian linen trousers, perfect for summer elegance.', 95.00, 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1000&auto=format&fit=crop', 'Pants'),
+('Minimalist Essential Tee', 'Premium heavy-weight cotton tee in a clean, minimalist fit.', 45.00, 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop', 'Tees');

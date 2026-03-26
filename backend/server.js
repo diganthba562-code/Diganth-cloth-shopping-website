@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const productRoutes = require('./routes/productRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 
 app.use('/api/products', productRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/orders', orderRoutes);
 
 app.get('/', (req, res) => {
     res.send('Diganth Cloth Brand API is running...');
