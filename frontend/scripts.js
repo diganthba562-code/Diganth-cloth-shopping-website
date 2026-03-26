@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 1, name: 'Essential Oversized Hoodie', price: 79.99, image: '/assets/premium_hoodie.png' },
             { id: 2, name: 'Premium Vintage Denim Jacket', price: 95.00, image: '/assets/premium_denim_jacket.png' },
             { id: 3, name: 'Heavyweight Oversized Premium Tee', price: 45.00, image: '/assets/premium_oversized_tee.png' },
-            { id: 5, name: 'Phantom Knit Sneakers', price: 120.00, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop' }
+            { id: 5, name: 'Premium Retro Air Jordans', price: 180.00, image: '/assets/premium_jordans.png' }
         ];
         renderProducts(fallbacks.map(f => ({ ...f, image_url: f.image })));
     };
