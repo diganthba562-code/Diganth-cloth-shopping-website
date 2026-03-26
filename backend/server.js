@@ -19,6 +19,12 @@ app.get('/', (req, res) => {
     res.send('Diganth Cloth Brand API is running...');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Export for Vercel
+module.exports = app;
+
+// Only listen if running directly (locally)
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}

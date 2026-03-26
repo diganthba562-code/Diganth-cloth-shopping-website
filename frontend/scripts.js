@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageForm = document.getElementById('message-form');
     const formStatus = document.getElementById('form-status');
 
-    // Backend API Base URL - Update this to your Railway/Vercel backend URL
-    const API_BASE_URL = 'http://localhost:5000'; 
+    // Backend API Base URL - Empty for relative paths on Vercel
+    const API_BASE_URL = ''; 
 
     // Fetch products from backend
     const fetchProducts = async () => {
