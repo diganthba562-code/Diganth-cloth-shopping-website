@@ -48,4 +48,4 @@ INSERT INTO products (name, description, price, image_url, category) VALUES
 ('Essential Oversized Hoodie', 'Heavyweight cotton-blend hoodie with a modern oversized fit and kangaroo pocket.', 1300.00, '/assets/premium_hoodie.png', 'Hoodie'),
 ('Premium Vintage Denim Jacket', 'Classic distressed denim jacket with a modern fit and heavy-duty stitching.', 2400.00, '/assets/premium_denim_jacket.png', 'Jacket'),
 ('Heavyweight Oversized Premium Tee', 'Boxy, oversized silhouette with dropped shoulders and a thick ribbed collar.', 700.00, '/assets/premium_oversized_tee.png', 'T-shirt'),
-('Premium Retro Air Jordans', 'Iconic high-top sneakers with premium leather and classic colorblocking.', 180.00, '/assets/premium_jordans.png', 'Shoes');
+('Premium Retro Air Jordans', 'Iconic high-top sneakers with premium leather and classic colorblocking.', 10000.00, '/assets/premium_jordans.png', 'Shoes');
